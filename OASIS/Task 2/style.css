@@ -129,7 +129,7 @@ nav ul li a:hover::after{
   margin: 14px 0;
 }
 .tab-contents ul li span{
-  color: #f11359;
+  color: #ff004f;
   font-size: 15px;
 }
 .tab-contents{
@@ -257,7 +257,6 @@ nav ul li a:hover::after{
   color: #ff004f;
   transform: translateY(-3px);
 }
-/*--download cv button--*/
 
 .btn.btn2{
   display: block;
@@ -271,7 +270,6 @@ nav ul li a:hover::after{
   transition: background 0.5s;
 }
 
-/*---contact form-----*/
 .contact-right form{
   width: 100%;
 }
