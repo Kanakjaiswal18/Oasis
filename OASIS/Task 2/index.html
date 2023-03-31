@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X=UA-Compatible" content="IE-edge">
+        <meta name="veiwport" content=""width=device-width, initial-scale="1.0">
+        <title> My Portfolio </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f1ebf43d75.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Student</p>
+                    <h1>Hello, I'm <span>Kanak Jaiswal</span><br>from Nagpur, Maharashtra</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="C:\Users\DELL\Documents\OASIS\Task 2\picc.jpg" height="400px" >
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1><br>
+                        <p>☛ I am skilled, dedicated, and open-minded individual.<br>
+                            ☛ Hardworking, fast learner and passionate job seeker with strong organizational skills eager <br>
+                            to secure entry level position. Ready to help team achieve company goals.<br>
+                            ☛ Believe that a person should work on developing their professional skills and learning new things all the time.<br>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Programming Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C</span><br></li>
+                                <li><span>Python</span><br></li>
+                                <li><span>SQL</span><br></li>
+                                <li><span>HTML</span><br></li>
+                                <li><span>Android App Development</span><br></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents"  id="experience">
+                            <ul>
+                                <li><span>Currently<br></span><br>Intership Trainee at Oasis Infobyte</li>
+                                <li>Intern at Txon in Web Development and Design</li>
+                                <li><span></span><br></li>
+                                <li><span></span><br></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents"  id="education">
+                            <ul>
+                                <li><span>2018</span><br>10th Pass from Centre Point School, Nagpur</li>
+                                <li><span>2020</span><br>12th from St Paul Junior Senior College, Nagpur</li>
+                                <li><span>2021-24</span><br>Persuing Computer Science Engineering Specialization in Data Science from RCOEM,Nagpur</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                  
+                  <div>
+                    <i class="fa-brands fa-adn"></i>
+                    <h2>App Design</h2>
+                    <p>Knowledge to create perfect look & feel of mobile apps consisting of good quality user interface and user experience elements.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                    <div>
+                        <i class="fas fa-crop-alt"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Specialized in creating beautiful & smooth UI/UX Designs that provide better user experience.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                      <i class="fas fa-code"></i>
+                      <h2>Web Design</h2>
+                      <p>Having a great skills to create as well as recreate websites for small, medium, and large enterprises.</p>
+                      <a href="#">Learn More</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="contact">
+            <div class ="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>kanakjaiswal18@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i> +91 xxxxx xxxxx</p>
+
+                        <div class="social-icons">
+                            <a href="https://github.com/Kanakjaiswal18"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/kanak-jaiswal-989461253/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name Here" required>
+                            <input type="email" name="Email" placeholder="Enter Valid Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for (tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right="0";
+            }
+            function closemenu(){
+                sidemenu.style.right="-200px";
+            }
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzFZWzZBIgRes5mea1g7DEQyDdl5NJz35NBj9zVfFOKsgKvTT2-nWryx6BaEx0nDoM/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    </body>
+</html>
